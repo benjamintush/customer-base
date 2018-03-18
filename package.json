@@ -4,14 +4,20 @@
   "description": "Simple GraphQL server",
   "main": "server.js",
   "scripts": {
-    "dev:server": "nodemon server.js"
+    "dev:server": "nodemon server.js --exec 'npm run lint'",
+    "lint": "eslint ."
   },
   "author": "Benjamin Mwendwa",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
-    "graphql": "^0.13.2",
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
     "nodemon": "^1.17.2"
   }
 }
